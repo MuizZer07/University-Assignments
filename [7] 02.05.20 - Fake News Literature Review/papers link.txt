@@ -1,0 +1,75 @@
+1.  CSI: A Hybrid Deep Model for Fake News Detection 
+	- https://dl.acm.org/doi/abs/10.1145/3132847.3132877
+	
+2. 	Fake news detection using naive Bayes classifier 
+	- https://ieeexplore.ieee.org/abstract/document/8100379
+	
+3.	Exploiting Tri-Relationship for Fake News Detection
+	- https://www.researchgate.net/publication/321994372_Exploiting_Tri-Relationship_for_Fake_News_Detection
+
+4. 	A Survey on Natural Language Processing for Fake News Detection 
+	- https://www.semanticscholar.org/paper/A-Survey-on-Natural-Language-Processing-for-Fake-Oshikawa-Qian/d4bbd9c7d95f00a5acaef2f2a48f8543f52df18a
+
+5.	FakeNewsNet: A Data Repository with News Content, Social Context and Spatialtemporal Information for Studying Fake News on Social Media
+	- https://arxiv.org/abs/1809.01286
+	
+6. 	Unsupervised Fake News Detection on Social Media: A Generative Approach
+	- https://www.researchgate.net/publication/335481117_Unsupervised_Fake_News_Detection_on_Social_Media_A_Generative_Approach
+
+7.	Fake News Detection in Social Networks via Crowd Signals
+	- https://dl.acm.org/doi/abs/10.1145/3184558.3188722
+	
+8.	A HYBRID APPROACH TO FAKE NEWS DETECTION ON SOCIAL MEDIA 
+	- https://www.ajol.info/index.php/njt/article/view/174996
+	
+9. 	Multi-Source Multi-Class Fake News Detection
+	- https://www.aclweb.org/anthology/C18-1131/
+	
+10. 	Fake News Detection on Social Media using Geometric Deep Learning
+	- https://arxiv.org/abs/1902.06673
+	
+11.	Beyond News Contents
+	- https://dl.acm.org/doi/abs/10.1145/3289600.3290994
+	
+12.	Fake News: A Technological Approach to Proving the Origins of Content, Using Blockchains
+	- https://www.researchgate.net/publication/321790598_Fake_News_A_Technological_Approach_to_Proving_the_Origins_of_Content_Using_Blockchains
+
+13. 	A Theoretical Framework to Build Trust and Prevent Fake News in Social Media Using Blockchain
+	- https://link.springer.com/chapter/10.1007/978-3-319-99007-1_88
+	
+14. 	Proof of Credibility: A Blockchain Approach for Detecting and Blocking Fake News in Social Networks
+`	- https://www.researchgate.net/publication/338282589_Proof_of_Credibility_A_Blockchain_Approach_for_Detecting_and_Blocking_Fake_News_in_Social_Networks
+
+15. 	Using Blockchain to Rein in the New Post-Truth World and Check the Spread of Fake News
+	- https://ieeexplore.ieee.org/document/8764081
+	
+16. 	Tracing the Source of News Based on Blockchain
+	- https://www.researchgate.net/publication/327820563_Tracing_the_Source_of_News_Based_on_Blockchain
+
+17. 	AI Blockchain Platform for Trusting News
+	- https://ieeexplore.ieee.org/abstract/document/8884985
+	
+18. 	Fake News, Disinformation, and Deepfakes: Leveraging Distributed Ledger Technologies and Blockchain to Combat Digital Deception and Counterfeit Reality
+	- https://arxiv.org/abs/1904.05386
+	
+19. 	News sharing in social media: The effect of gratifications and prior experience
+	- https://www.sciencedirect.com/science/article/pii/S074756321100210X
+	
+20. 	Social Media and Fake News in the 2016 Election
+	- https://www.aeaweb.org/articles?id=10.1257/jep.31.2.211
+	
+21. 	Political News in the News Feed: Learning Politics from Social Media
+	- https://www.tandfonline.com/doi/abs/10.1080/15205436.2015.1045149
+	
+22. 	Social Information Processing in News Aggregation	
+	- https://ieeexplore.ieee.org/abstract/document/4376224
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

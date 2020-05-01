@@ -10,3 +10,4 @@ Information technology, Business related class assignments.
 - [4] 05.04.20 - Fake News: Blockchain based project Proposal
 - [5] 10.04.20 - Business Environment Assessment: Assessment Study (Descriptive)
 - [6] 29.04.20 - Digital Disruption: Report on the digital disruption (Descriptive)
+- [7] 02.05.20 - Fake News Literature Review: Literature Syntheis on spread of fake news on social meda
