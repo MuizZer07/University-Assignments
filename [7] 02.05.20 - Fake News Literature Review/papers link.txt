@@ -1,4 +1,4 @@
-1.  CSI: A Hybrid Deep Model for Fake News Detection 
+1.  	CSI: A Hybrid Deep Model for Fake News Detection 
 	- https://dl.acm.org/doi/abs/10.1145/3132847.3132877
 	
 2. 	Fake news detection using naive Bayes classifier 
