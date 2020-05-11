@@ -55,32 +55,43 @@ public class HexEditor {
 				try {
 					raf = new RandomAccessFile(file, fileAccess);
 					
-					while(!prevCmd.startsWith("e")) {
-						long byte_value = printHexTable(raf, rownumber, decimal_byte_address); // printing hex table from row 0
+					while(!prevCmd.equals("e") && !prevCmd.equals("exit")) {
 						
-						// print file & byte information
-						System.out.printf("\nByte Address: 0x%X (%d)", decimal_byte_address, decimal_byte_address );
-						System.out.printf("\nByte Value:   0x%X (%d signed) (", byte_value, byte_value);
-						System.out.print(Integer.parseUnsignedInt(Long.toString(byte_value)));
-						System.out.print(" unsigned)");
-						System.out.printf("\nFile Size:    0x%X (%d) %s %s", file.length(), file.length(), formatSize(file.length()), access);
-						System.out.println("\nFile Name:    " + filename);
-						
-						// printing previous command
-						System.out.println();
-						if(!prevCmd.equals("")) {
-							System.out.println(getCommand(prevCmd, decimal_byte_address, prev_byte_address));
-						}
-						
-						System.out.print("Command: ");
-						prevCmd = scanner.nextLine();
-						prev_byte_address = decimal_byte_address;
-						decimal_byte_address = executeCommand(prevCmd, decimal_byte_address, raf);
-						rownumber = calculateRowNumber(decimal_byte_address);
+						try {
+							long byte_value = printHexTable(raf, rownumber, decimal_byte_address); // printing hex table from row 0
+							
+							// print file & byte information
+							System.out.printf("\nByte Address: 0x%X (%d)", decimal_byte_address, decimal_byte_address );
+							System.out.printf("\nByte Value:   0x%X (%d signed) (", byte_value, byte_value);
+							System.out.print(Integer.parseUnsignedInt(Long.toString(byte_value)));
+							System.out.print(" unsigned)");
+							System.out.printf("\nFile Size:    0x%X (%d) %s %s", file.length(), file.length(), formatSize(file.length()), access);
+							System.out.println("\nFile Name:    " + filename);
+							
+							// printing previous command
+							System.out.println();
+							if(!prevCmd.equals("")) {
+								System.out.println(getCommand(prevCmd, decimal_byte_address, prev_byte_address));
+							}
+							
+							System.out.print("Command: ");
+							prevCmd = scanner.nextLine();
+							prev_byte_address = decimal_byte_address;
+							decimal_byte_address = executeCommand(prevCmd, decimal_byte_address, raf);
+							rownumber = calculateRowNumber(decimal_byte_address);
+							}
+							catch(Exception e) {
+								printValidCommands();
+								System.out.print("Command: ");
+								prevCmd = scanner.nextLine();
+								prev_byte_address = decimal_byte_address;
+								decimal_byte_address = executeCommand(prevCmd, decimal_byte_address, raf);
+								rownumber = calculateRowNumber(decimal_byte_address);
+							}
 					}
 					raf.close();  // close file
 				}catch(Exception e) {
-					System.out.println("ERROR :: " + e.toString());
+					System.out.println("ERROR:: Unable to open file.");
 				}
 			}	
 		}else{
@@ -88,6 +99,26 @@ public class HexEditor {
 		}
 	}
 	
+	public static void printValidCommands() {
+		System.out.println("ERROR :: Invalid Command. Please use a valid command. ");
+		System.out.println("  List of Valid commands: ");
+		System.out.println("  - Go To a Byte location: goto 1A, Shorthand: g 1A");
+		System.out.println("  - Go To a Byte location: goto 1A, Shorthand: g 1A h");
+		System.out.println("  - Go To a Byte location: goto 1 d, Shorthand: g 1 d");
+		System.out.println("  - Jump To a Byte location: jump 1A, Shorthand: j 1A");
+		System.out.println("  - Jump To a Byte location: jump 1A h, Shorthand: j 1A h");
+		System.out.println("  - Jump To a Byte location: jump 1 d, Shorthand: j 1 d");
+		System.out.println("  - Set a Value To a Byte location: set 1A, Shorthand: s 1A");
+		System.out.println("  - Set a Value To a Byte location: set 1A h, Shorthand: s 1A h");
+		System.out.println("  - Set a Value To a Byte location: set 1 d, Shorthand: s 1 d");
+		System.out.println("  - Set a Value To a Byte location: set 'a' d, Shorthand: s 'a' d");
+		System.out.println("  - Truncate from current location: truncate, Shorthand: t");
+		System.out.println("  - Move to next page: next, Shorthand: n");
+		System.out.println("  - Move to previous page: previous, Shorthand: p");
+		System.out.println("  - Move to hex mode: hex, Shorthand: h");
+		System.out.println("  - Move to ascii page: ascii, Shorthand: a");
+		System.out.println();
+	}
 	
 	public static long calculateRowNumber(long byte_address) {
 		long row = 0;
@@ -114,15 +145,15 @@ public class HexEditor {
 		String[] commands1 = cmd1.split(" ");
 		
 		try {
-			if(cmd.startsWith("g")) {  // goto command
+			if(commands[0].equals("g") || commands[0].equals("goto")) {  // goto command
 				decimal_byte_address = gotoOperation(commands);
 			}
 			
-			else if(cmd.startsWith("j")) {  // jump command
+			else if(commands[0].equals("j") || commands[0].equals("jumo")) {  // jump command
 				decimal_byte_address = jumpOperation(commands, prev_byte_address);
 			}
 			
-			else if(cmd.startsWith("s")) {  // set command
+			else if(commands[0].equals("s") || commands[0].equals("set")) {  // set command
 				if(!readOnly) {
 					boolean flag = setOperation(commands1, prev_byte_address, raf);
 					if(flag) {
@@ -131,37 +162,37 @@ public class HexEditor {
 				}
 			}
 			
-			else if(cmd.startsWith("t")) {  // truncate command
+			else if(commands[0].equals("t") || commands[0].equals("truncate")) {  // truncate command
 				if(!readOnly) {
 					truncateOperation(prev_byte_address, raf);
 				}
 			}
 			
-			else if(cmd.startsWith("h")) {  // truncate command
+			else if(commands[0].equals("h") || commands[0].equals("hex")) {  // truncate command
 				mode = "hex";
 				decimal_byte_address = prev_byte_address;
 			}
 			
-			else if(cmd.startsWith("a")) {  // truncate command
+			else if(commands[0].equals("a") || commands[0].equals("ascii")) {  // truncate command
 				mode = "ascii";
 				decimal_byte_address = prev_byte_address;
 			}
 			
-			else if(cmd.startsWith("n")) {  // next command
+			else if(commands[0].equals("n") || commands[0].equals("next")) {  // next command
 				int pageBytes = rowCount * rowCount;
 				String command = "j " + pageBytes + " d";
 				commands = command.split(" ");
 				decimal_byte_address = jumpOperation(commands, prev_byte_address);
 			}
 			
-			else if(cmd.startsWith("p")) {  // previous command
+			else if(commands[0].equals("p") || commands[0].equals("previous")) {  // previous command
 				int pageBytes = rowCount * rowCount * -1;
 				String command = "j " + pageBytes + " d";
 				commands = command.split(" ");
 				decimal_byte_address = jumpOperation(commands, prev_byte_address);
 			}
 			
-			else if(cmd.startsWith("f")) {  // find command
+			else if(commands[0].equals("f") || commands[0].equals("find")) {  // find command
 				String query = "";
 				
 				if(commands1.length < 2) {
@@ -185,17 +216,17 @@ public class HexEditor {
 				}
 			}
 			
-			else if(cmd.startsWith("e")) {  // exit command
+			else if(commands[0].equals("e") || commands[0].equals("exit")) {  // exit command
 				decimal_byte_address = prev_byte_address;
 			}
 			
 			else {
 				decimal_byte_address = prev_byte_address;
-				System.out.println("INFO :: Command not found. Try commands: goto 1234, goto 1234 b, jump 123");
+				printValidCommands();
 			}
 		}catch(Exception e){
 			decimal_byte_address = prev_byte_address;
-			System.out.println("ERROR :: Command is not valid. " + e.toString());
+			printValidCommands();
 			return decimal_byte_address;
 		}		
 		return decimal_byte_address;
@@ -316,17 +347,17 @@ public class HexEditor {
 		
 		// hex or decimal mentioned in the command
 		else if(commands.length == 3) {
-			int jump = Integer.parseInt(commands[1], 16);
 			String jump_type = commands[2].toLowerCase();
 			
 			if(jump_type.startsWith("h")) {  // jump is a hexadecimal value
+				long jump = Integer.parseInt(commands[1], 16);
 				decimal_byte_address = prev_byte_address + jump; 
 				
 				if(decimal_byte_address < 0) {
 					decimal_byte_address = 0;
 				}
 			}else if(jump_type.startsWith("d")) {  // jump is a decimal value
-				jump = Integer.parseInt(commands[1]);
+				long jump = Integer.parseInt(commands[1]);
 				decimal_byte_address = prev_byte_address + jump; 
 				
 				if(decimal_byte_address < 0) {
@@ -334,7 +365,7 @@ public class HexEditor {
 				}
 			}
 		}
-	
+
 		return decimal_byte_address;
 	}
 	
@@ -399,17 +430,17 @@ public class HexEditor {
 	
 	
 	public static String getCommand(String cmd, long byte_address, long prev_byte_address) {
-
-		if(cmd.startsWith("g")) {
+		String cmd1 = cmd.toLowerCase().split(" ")[0];
+		if(cmd1.equals("g") || cmd1.equals("goto")) {
 			return String.format("Moved to 0x%X", byte_address);
 		}
 		
-		else if(cmd.startsWith("j")) {
+		else if(cmd1.equals("j") || cmd1.equals("jump")) {
 			String jump = "";
 			String[] commands = cmd.split(" ");
 			long jump_value = 0;
 			
-			if(commands.length>3 && commands[2].startsWith("d")) {
+			if(commands.length == 3 && commands[2].startsWith("d")) {
 				jump_value = Integer.parseInt(commands[1]);
 			}else {
 				jump_value = Long.parseUnsignedLong(commands[1], 16);
@@ -424,7 +455,7 @@ public class HexEditor {
 			return String.format("Jumped to 0x%X address 0x%X bytes %s", byte_address, jump_value, jump);
 		}
 		
-		else if(cmd.startsWith("s")) {
+		else if(cmd1.equals("s") || cmd1.equals("set")) {
 			if(!readOnly) {
 				String[] commands = cmd.split(" ");
 				int byte_value = 0;
@@ -448,15 +479,15 @@ public class HexEditor {
 			}
 		}
 		
-		else if(cmd.startsWith("a")) {
+		else if(cmd1.equals("a") || cmd1.equals("ascii")) {
 			return "Swiched to ASCII mode";
 		}
 		
-		else if(cmd.startsWith("h")) {
+		else if(cmd1.equals("h") || cmd1.equals("hex")) {
 			return "Swiched to Hex mode";
 		}
 		
-		else if(cmd.startsWith("t")) {
+		else if(cmd1.equals("t") || cmd1.equals("truncate")) {
 			if(!readOnly) {
 				return String.format("File truncated from address 0x%X", prev_byte_address);
 			}else {
@@ -464,11 +495,11 @@ public class HexEditor {
 			}
 		}
 		
-		else if(cmd.startsWith("n")) {
+		else if(cmd1.equals("n") || cmd1.equals("next")) {
 			return "Moved to Next Page";
 		}
 		
-		else if(cmd.startsWith("p")) {
+		else if(cmd1.equals("p") || cmd1.equals("previous")) {
 			return "Moved to Previous Page";
 		}
 		
