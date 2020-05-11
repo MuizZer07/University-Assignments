@@ -13,4 +13,4 @@ Information technology, Business related class assignments.
 -  a[7] 02.05.20 - Fake News Literature Review: Literature Syntheis on spread of fake news on social media
 -  a[8] 30.04.20 - 2020CSE5DWD Data Warehouse: a Data Warehouse conceptual design using Star Schema Modelling 
 -  a[9] 06.05.20 - PPMP20009 Leading Lean Projects Assessment Specification: Organizing ICC Cricket world cup
-- b[10] 12.05.20 - Java HexEditor
+- b[10] 12.05.20 - CSE1OOF/4OOF Java HexEditor Programming Problem
