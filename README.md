@@ -15,3 +15,4 @@ Information technology, Business related class assignments.
 -  a[9] 06.05.20 - PPMP20009 Leading Lean Projects Assessment Specification: Organizing ICC Cricket world cup
 - b[10] 12.05.20 - CSE1OOF/4OOF Java HexEditor Programming Problem
 - b[11] 14.05.20 - Digital Transformation Report (Recommendation Part Only)
+- b[13] 18.05.20 - MGT703 Business Strategy Report
