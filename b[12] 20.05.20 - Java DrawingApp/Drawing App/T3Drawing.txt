@@ -1,0 +1,32 @@
+20 30
+*
+.
+line
+19 1 29 0 1
+#
+.
+line
+12 5 6 1 0
+#
+.
+circle
+10 5 2
++
+.
+rectangle
+8 16 11 10
+=
+.
+rectangle
+11 19 8 4
+=
+.
+triangle
+2 21 6 1 0
+*
+.
+text
+2 10
+FOR SALE
+1 0
+.
