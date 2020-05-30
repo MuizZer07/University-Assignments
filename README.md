@@ -19,3 +19,4 @@ Information technology, Business related class assignments.
 - b[13] 18.05.20 - MGT703 Business Strategy Report
 - b[14] 26.05.20 - ICT710 Professional Practice and Ethics report
 - b[15] 28.05.20 - MITS5004 Critical Analysis of Networking Security Tools
+- b[16] 30.05.20 - MITS4001 Business Information Systems case study based report
