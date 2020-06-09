@@ -21,4 +21,5 @@ Information technology, Business related class assignments.
 - b[15] 28.05.20 - MITS5004 Critical Analysis of Networking Security Tools
 - b[16] 30.05.20 - MITS4001 Business Information Systems case study based report
 - b[17] 03.06.20 - Fake news Mini Thesis
-- b[18] 05.06.20 - MIS712 Digital Transformation Strategies
+- b[18] 05.06.20 - MIS712 Digital Transformation Strategies report
+- b[19] 08.06.20 - CSE4OOF Java Space Shuttle: OOP based Programming Problem
