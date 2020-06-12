@@ -23,3 +23,4 @@ Information technology, Business related class assignments.
 - b[17] 03.06.20 - Fake news Mini Thesis
 - b[18] 05.06.20 - MIS712 Digital Transformation Strategies report
 - b[19] 08.06.20 - CSE4OOF Java Space Shuttle: OOP based Programming Problem
+- c[20] 12.06.20 - Python Data Wrangling
