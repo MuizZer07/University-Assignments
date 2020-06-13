@@ -24,3 +24,4 @@ Information technology, Business related class assignments.
 - b[18] 05.06.20 - MIS712 Digital Transformation Strategies report
 - b[19] 08.06.20 - CSE4OOF Java Space Shuttle: OOP based Programming Problem
 - c[20] 12.06.20 - Python Data Wrangling
+- c[21] 13.06.20 - MITS4001 Cloud Based Information Systems literature review
