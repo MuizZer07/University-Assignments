@@ -1,0 +1,5 @@
+P01; Jane Smith; drawing, playing piano
+P02; Tom Brown; gardening
+P03; Bob Carter; drinking, dancing, running
+P04; Frank Dawson; playing electronic games, soccer
+...

@@ -27,3 +27,4 @@ Information technology, Business related class assignments.
 - c[21] 13.06.20 - MITS4001 Cloud Based Information Systems literature review
 - c[22] 13.06.20 - MITS4001 Business Information System Case Study
 - c[23] 16.06.20 - ICT710 Professional Practice and Ethics: Diversity in IT governance
+- c[24] 26.06.20 -  CSE1IOO/CSE4IOO Intermediate Object-Oriented Programming
