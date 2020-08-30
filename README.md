@@ -29,3 +29,4 @@ Information technology, Business related class assignments.
 - c[23] 16.06.20 - ICT710 Professional Practice and Ethics: Diversity in IT governance
 - c[24] 26.06.20 - CSE1IOO/CSE4IOO Intermediate Object-Oriented Programming
 - c[25] 26.08.20 - MITS5512 Data Science Case Study
+- c[26] 31.08.20 - Java Programming Problem Patient Record System
