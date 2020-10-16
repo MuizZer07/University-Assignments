@@ -31,3 +31,5 @@ Information technology, Business related class assignments.
 - c[25] 26.08.20 - MITS5512 Data Science Case Study
 - c[26] 31.08.20 - Java Programming Problem Patient Record System
 - c[27] 24.09.20 - Data Science Research Report
+- c[28] 10.10.20 - Java Patient Record System pt. 2
+- c[29] 10.10.20 - Data Science Assessment 3
