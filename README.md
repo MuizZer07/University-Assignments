@@ -34,3 +34,4 @@ Information technology, Business related class assignments.
 - c[28] 10.10.20 - Java Patient Record System pt. 2
 - c[29] 10.10.20 - Data Science Assessment 3
 - d[30] 15.10.20 - Software Quality Assignment
+- d[31] 20.10.20 - Java OOP Lucky Game
