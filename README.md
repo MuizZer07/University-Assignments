@@ -1,9 +1,10 @@
 ### Commercial Assignments
 
-Assignments that I've done for various clients. Mostly university (undergrad) Computer Science,
-Information technology, Business related class assignments.
+This repository contains assignments which I solved from university Computer Science, 
+Information technology, Business related classes (Australian undergrad & masters courses).
+Feel free to get any help from those solutions. Thanks!
 
-#### Completed Assignments:
+#### List of Assignments:
 - _a[1] 15.10.19 - CSE1OOF/CSE4OOF Java OOP Assignment: Object Oriented Programming Problem
 - _a[2] 11.12.19 - ICT AI Theory: Analysis of Solution by AI Algorithm 
 - _a[3] 08.04.20 - Emerging Technologies: Impact of emerging technologies 
@@ -29,9 +30,14 @@ Information technology, Business related class assignments.
 - c[23] 16.06.20 - ICT710 Professional Practice and Ethics: Diversity in IT governance
 - c[24] 26.06.20 - CSE1IOO/CSE4IOO Intermediate Object-Oriented Programming
 - c[25] 26.08.20 - MITS5512 Data Science Case Study
-- c[26] 31.08.20 - Java Programming Problem Patient Record System
-- c[27] 24.09.20 - Data Science Research Report
-- c[28] 10.10.20 - Java Patient Record System pt. 2
-- c[29] 10.10.20 - Data Science Assessment 3
-- d[30] 15.10.20 - Software Quality Assignment
-- d[31] 20.10.20 - Java OOP Lucky Game
+- c[26] 31.08.20 - CSE1IOO/CSE4IOO Semester 2, 2020: Java Programming Problem Patient Record System
+- c[27] 24.09.20 - MITS5512: Data Science Research Report
+- c[28] 10.10.20 - CSE1IOO/CSE4IOO Semester 2, 2020: Java Patient Record System pt. 2
+- c[29] 10.10.20 - MITS5512: Data Science Assessment 3
+- d[30] 15.10.20 - MITS5501: Software Quality Assignment
+- d[31] 20.10.20 - MITS4002_S2_2020: Java OOP Lucky Game
+- d[32] 01.04.21 - MITS6002 Data Assessment
+- d[33] 09.04.21 - CSE2ALG / CSE5ALG: Java Algorithm
+- d[34] 18.04.21 - MITS6002 Business Analytics
+- d[35] 11.05.21 - CSE2ALG / CSE5ALG: Java Algorithm pt. 2
+- d[36] 30.05.21 - CSE4IP&CSE5CES(BU-1) Intro to Python Programming
