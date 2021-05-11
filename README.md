@@ -37,7 +37,4 @@ Feel free to get any help from those solutions. Thanks!
 - d[30] 15.10.20 - MITS5501: Software Quality Assignment
 - d[31] 20.10.20 - MITS4002_S2_2020: Java OOP Lucky Game
 - d[32] 01.04.21 - MITS6002 Data Assessment
-- d[33] 09.04.21 - CSE2ALG / CSE5ALG: Java Algorithm
 - d[34] 18.04.21 - MITS6002 Business Analytics
-- d[35] 11.05.21 - CSE2ALG / CSE5ALG: Java Algorithm pt. 2
-- d[36] 30.05.21 - CSE4IP&CSE5CES(BU-1) Intro to Python Programming
