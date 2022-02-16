@@ -1,5 +1,3 @@
-### Commercial Assignments
-
 This repository contains assignments which I solved from university Computer Science, 
 Information technology, Business related classes (Australian undergrad & masters courses).
 Feel free to get any help from those solutions. Thanks!
